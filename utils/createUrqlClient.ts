@@ -141,7 +141,10 @@ export const createUrqlClient = (ssrExchange: any, ctx: any) => {
   }
 
   return {
-    url: "http://localhost:4000/graphql",
+    url:
+      process.env.NODE_ENV === "production"
+        ? "https://zae9b1ac7-zb8a15a64-gtw.qovery.io/graphql"
+        : "http://localhost:4000/graphql",
     fetchOptions: {
       credentials: "include" as const,
       headers: cookie
