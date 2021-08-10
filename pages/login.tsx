@@ -9,7 +9,7 @@ import Link from "next/link";
 import { withUrqlClient } from "next-urql";
 import { createUrqlClient } from "../utils/createUrqlClient";
 
-const login = () => {
+const Login = () => {
   const [, login] = useLoginMutation();
   const router = useRouter();
 
@@ -174,4 +174,4 @@ const login = () => {
   );
 };
 
-export default withUrqlClient(createUrqlClient, { ssr: false })(login);
+export default withUrqlClient(createUrqlClient, { ssr: false })(Login);

@@ -9,7 +9,7 @@ import Link from "next/link";
 import { withUrqlClient } from "next-urql";
 import { createUrqlClient } from "../utils/createUrqlClient";
 
-const register = () => {
+const Register = () => {
   const [, register] = useRegisterMutation();
   const router = useRouter();
 
@@ -169,4 +169,4 @@ const register = () => {
   );
 };
 
-export default withUrqlClient(createUrqlClient, { ssr: false })(register);
+export default withUrqlClient(createUrqlClient, { ssr: false })(Register);

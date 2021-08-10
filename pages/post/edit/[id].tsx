@@ -12,7 +12,7 @@ import {
 import { createUrqlClient } from "../../../utils/createUrqlClient";
 import { useIsAuth } from "../../../utils/useIsAuth";
 
-const updatePost = () => {
+const UpdatePostPg = () => {
   useIsAuth();
   const [, updatePost] = useUpdatePostMutation();
   const router = useRouter();
@@ -107,4 +107,4 @@ const updatePost = () => {
   );
 };
 
-export default withUrqlClient(createUrqlClient)(updatePost);
+export default withUrqlClient(createUrqlClient)(UpdatePostPg);
