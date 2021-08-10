@@ -107,4 +107,4 @@ const UpdatePostPg = () => {
   );
 };
 
-export default withUrqlClient(createUrqlClient)(UpdatePostPg);
+export default withUrqlClient(createUrqlClient, { ssr: false })(UpdatePostPg);

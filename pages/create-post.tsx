@@ -66,4 +66,4 @@ const CreatePostPg = () => {
   );
 };
 
-export default withUrqlClient(createUrqlClient)(CreatePostPg);
+export default withUrqlClient(createUrqlClient, { ssr: false })(CreatePostPg);
